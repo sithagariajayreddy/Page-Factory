@@ -1,0 +1,14 @@
+User_Data:
+  first_name: shirt
+  last_name:  T-shirt
+  email_id: shirt@gmail.com
+  gender:  female
+  password: Tshirt123
+  confirm_password: Tshirt123
+  addressline1: paint street, blacky colony
+  addressline2: apt 111
+  city: vizag
+  state: Punjab
+  dateofbirth: 09/08/1975
+  pincode: 5000001
+  mobile: 5555555555
