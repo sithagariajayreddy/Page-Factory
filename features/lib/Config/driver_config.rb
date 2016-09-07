@@ -7,7 +7,7 @@ module Configuration
     Selenium::WebDriver::Chrome.driver_path = chromedriver_path
 
    @browser = Watir::Browser.new :chrome
-    #@browser = Watir::Browser.new :firefox
+   # @browser = Watir::Browser.new :firefox
     @browser.driver.manage.timeouts.implicit_wait = 10
     @browser.driver.manage.window.maximize
   end

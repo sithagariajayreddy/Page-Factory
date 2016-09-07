@@ -3,7 +3,7 @@ Feature: As a New User
 
   Background:
     Given I am on shopclues homepage
-
+    
   @watir
   Scenario: User needs to create a new account
     When I click on sign in

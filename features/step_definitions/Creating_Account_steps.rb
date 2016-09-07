@@ -1,9 +1,9 @@
 Given(/^I am on shopclues homepage$/) do
- visit(Homepage)
+ visit(CreatingAccount)
 end
 
 When(/^I click on sign in$/) do
- on(Homepage).sign_in
+ on(CreatingAccount).sign_in
 end
 
 And(/^I fill the user information$/) do
@@ -11,10 +11,10 @@ And(/^I fill the user information$/) do
 end
 
 And(/^I click Create Account$/) do
- on(Homepage).create_account
+ on(CreatingAccount).create_account
 end
 
 Then(/^I should see the user details$/) do
-  puts 'on(UserInfo).fill_user_information'
+  puts '#{on(UserInfo).fill_user_information}'
 end
 

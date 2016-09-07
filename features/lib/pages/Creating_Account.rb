@@ -1,17 +1,14 @@
-class Homepage
+#require 'page-object/page_factory'
+class CreatingAccount
   include PageObject
   include Configuration
 
 
-  # def initialize(browser)
-  #   @browser = browser
-  # end
 
-  def open
-   visit("http://www.shopclues.com")
-  end
+   page_url "http://www.shopclues.com/"
 
   def sign_in
+   # @browser.element(css: 'div.links-static ul li.account div#login_user_data a.account').wait_until_present
     @browser.element(css: 'div.links-static ul li.account div#login_user_data a.account').click
   end
 

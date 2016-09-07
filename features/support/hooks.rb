@@ -9,7 +9,7 @@
 #   case
 #     when !scenario.respond_to?('scenario_outline')
 #       @scenario_name = scenario.name
-#       if @scenario_name && !scenario.respond_to?('scenario_outlin e')
+#       if @scenario_name && !scenario.respond_to?('scenario_outline')
 #         scenario.source[1].send(:raw_steps).each do |step|
 #           @steps.push(step.name)
 #         end
@@ -34,12 +34,12 @@
 #   end
 #   quit_browser
 # end
-Before('@watir') do
+Before() do
 launch_browser
 end
 
-After('@watir') do
-  quit_browser
+After() do
+  #quit_browser
 end
 
 
