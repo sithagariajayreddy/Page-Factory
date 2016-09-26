@@ -9,7 +9,7 @@ And(/^I also provide password as (TomLegend@123)$/) do |password|
 end
 
 And(/^I click on login$/) do
-on(UserLogin).login
+on(UserLogin).login_button
 end
 
 Then(/^I should see the username and password$/) do

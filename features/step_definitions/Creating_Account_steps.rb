@@ -1,5 +1,6 @@
 Given(/^I am on shopclues homepage$/) do
  visit(CreatingAccount)
+ wait_for_some_time 2
 end
 
 When(/^I click on sign in$/) do

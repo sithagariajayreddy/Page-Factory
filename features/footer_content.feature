@@ -1,10 +1,15 @@
 Feature: After login to the website
   check the content in footer
 
-  Background:
-    Given I am on shopclues homepage
+#Reading Excel sheet
+  Scenario: I read work sheet
+    Given I have worksheet
+    When I provide sheet name footer_content
+    Then I should see same sheet object
 
-  @watir
+#Checking Footer Content
   Scenario: Check the content in footer
-    When I click on sign in
-    And I
+    Given I am on shopclues homepage
+    When I look for footer_content
+    And I click on shopclues image
+    Then I should see the correct footer content

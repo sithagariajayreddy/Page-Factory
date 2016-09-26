@@ -5,8 +5,18 @@ class UserLogin
   text_field(:email, :id => 'email')
   text_field(:password, :id => 'password')
 
+   DEFAULT_DATA = {
+       'email' => 'Legend123@gmail.com',
+       'password' => 'TomLegend@123'
+   }
 
-  def login
+  def login(data={})
+    data = DEFAULT_DATA
+    self.email = data['email']
+    self.password = data['password']
+  end
+
+  def login_button
     @browser.element(:css =>  "div.ml_function input.ml_function_button").click
   end
 
@@ -33,5 +43,7 @@ class UserLogin
   def shop_now
     @browser.element(:css => "div.site-content div.central-content div#product_list div#loadNextPage div.products-grid div.grid-product.special.category_grid_4 a").click
   end
+
+
 
 end

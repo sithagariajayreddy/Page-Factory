@@ -1,9 +1,10 @@
 class ParseXls
+
   def initialize
-        @work_sheet = Spreadsheet.open(File.join(File.absolute_path('../../..', File.dirname(__FILE__)),"resource","Bergdorf_Expected_content.xls"))
+        @work_sheet = Spreadsheet.open(File.join(File.absolute_path('../../..', File.dirname(__FILE__)),"resource","Content.xls"))
   end
 
-  def   get_sheet_by_name(sheet_name)
+  def get_sheet_by_name(sheet_name)
     @work_sheet.worksheets.each do |sheet|
       if sheet.name == sheet_name
         return sheet
@@ -22,7 +23,7 @@ class ParseXls
   end
 
   def get_sheet(sheet_name)
-    sheet_name_obj = self.get_sheet_by_name(sheet_name)
-    self.read_sheet(sheet_name_obj)
+    sheet_name_obj = get_sheet_by_name(sheet_name)
+    read_sheet(sheet_name_obj)
   end
 end
